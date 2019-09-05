@@ -384,7 +384,8 @@ export default class Table extends MapperFilter {
                     onClick: () => this.orderRecord(key)
                   } : {};
                   return (
-                    <th 
+                    <th
+                      title={typeof title === 'string' ? title : ''}
                       className={`${isOrdering ? ('_order ' + (isDesc ? '_desc ' : '_asc ')) : ''}_btn`}
                       key={key} 
                       {...clickHandlerForTh}
